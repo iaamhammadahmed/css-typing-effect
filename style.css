@@ -1,0 +1,27 @@
+.wrapper {
+  height: 100vh; /* Sets the height of the container to 100% of the viewport height */
+  display: grid; /* Uses CSS grid for layout */
+  place-items: center; /* Centers the content both horizontally and vertically */
+}
+
+.typing-demo {
+  width: 35ch; /* Sets the width of the typing area to approximately 35 characters */
+  animation: typing 2s steps(35), blink 0.5s step-end infinite alternate; /* Applies two animations to the typing-demo element */
+  white-space: nowrap; /* Prevents the text from wrapping to the next line */
+  overflow: hidden; /* Hides any overflow text */
+  border-right: 3px solid; /* Adds a border on the right side of the text */
+  font-family: monospace; /* Sets the font family to monospace */
+  font-size: 2em; /* Sets the font size to 2 times the default font size */
+}
+
+@keyframes typing {
+  from {
+    width: 0; /* Starts the typing animation with no width (hidden) */
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent; /* Makes the border color transparent at 50% of the animation */
+  }
+}
